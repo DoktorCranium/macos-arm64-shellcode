@@ -9,4 +9,4 @@ Shellcode generated can be used in C code directly
 
 Example fork program included to insert the generated shellcode 
 
-Main concept used from https://github.com/DoktorCranium/macos-arm64-shellcode 
+Main concept used from  https://github.com/daem0nc0re/macOS_ARM64_Shellcode 
