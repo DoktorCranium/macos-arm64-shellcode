@@ -2,7 +2,7 @@
 clear 
 echo "************************************************************"
 echo "    Automatic shellcode generator - FOR MACOS ARM64         "
-echo "    Reserve connect shell                                   "
+echo "    Reverse connect shell                                   "
 echo "    Based on daem0nc0re examples                            " 
 echo "    https://github.com/daem0nc0re/macOS_ARM64_Shellcode     " 
 echo "    Make sure you have xcode installed on your M1           "
