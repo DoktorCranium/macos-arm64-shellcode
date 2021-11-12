@@ -7,11 +7,14 @@ echo "    Based on daem0nc0re examples                            "
 echo "    https://github.com/daem0nc0re/macOS_ARM64_Shellcode     " 
 echo "    Make sure you have xcode installed on your M1           "
 echo "************************************************************"
+
 # check if we have xcode in place else fail 
-if [[ $(xcode-select -p | grep 'CommandLineTools') != *CommandLineTools ]]; then
-  echo "compiler not found ? rung gcc and install it"
-  exit 1 
-fi
+# Does not work well
+#if [[ $(xcode-select -p | grep 'CommandLineTools') != *CommandLineTools ]]; then
+#  echo "compiler not found ? rung gcc and install it"
+#  exit 1 
+#fi
+
 echo -e "What IP are we connecting to ? : \c"
 read IP 
 echo -e "What Port Number are we connecting to? : \c"
